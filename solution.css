@@ -1,0 +1,12 @@
+/* solution.css */
+
+/* Instead of using !important, we adjust the specificity to override the conflicting styles.  We make sure the more specific selectors (e.g., class selectors followed by id selectors) are applied to resolve the conflicts and have our desired result without resorting to !important */
+#myElement {
+  color: blue;
+}
+
+.myClass #myElement {
+  color: green; /*This will override #myElement because of higher specificity*/
+}
+
+/* Other style rules that are easier to maintain and debug*/
